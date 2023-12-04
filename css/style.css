@@ -2,3 +2,27 @@
 body {
     background-color: deeppink;
 }
+
+/**************/
+/* Les cards  */
+/**************/
+.card {
+    background-color: azure;
+    border: solid;
+    width: 20%;
+    border-radius: 10px;
+}
+
+/* L'image dans la card */
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: blue;
+}
+
+/**********************/
