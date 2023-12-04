@@ -30,9 +30,12 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-/**************/
-/* Les cards  */
-/**************/
+
+
+/***************************/
+/*       Les cards         */
+/***************************/
+
 .card {
     background-color: whitesmoke;
     width: 30%;

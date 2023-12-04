@@ -13,38 +13,25 @@ console.log("Premier ingrédient, de la première recette : ", recettes[0]["ingr
 console.log("*******************************************************************");
 // A vous de jouer !!
 /****************************************************************************************************/
-/*
-// Exemple de boucle for of
-for (let recette of recettes) {
-    console.log(recette);
-}
-*/
-// Exemple de boucle for
-for (let i = 0; i < 5; i++ ){
-    console.log(recettes[i].ingredients[0]);
-}
+let section = document.querySelector("#recettes");
 
-/* A partir d'une recette affiche la carte associée */
-let card = (recette) => {
-    let section = document.querySelector("#recettes");
-    section.innerHTML += `<article class="card"><img
-    class=""
-    src="images/${recette.image}"
-    alt="" />
-    <h3>${recette.name}</h3> 
-    <p> Bla bla bla </p>
-    <h4>RECETTE</h4>
-    <p> Bla bla bla </p>
-    <h4>INGREDIENTS</h4>
-    <p> Bla bla bla </p></article>`;
+for (let i = 0 ; i < 5 ; i++){
+    console.log(recettes[i].name);
+    /* Rajouter des choses dans la partie suivante */
+    section.innerHTML += `<article class="card">
+                            <img src="images/${recettes[i].image}"/>
+                            <h3>${recettes[i].name}</h3>
+                            <p>blabla</p>
+                            <h4>RECETTE</h4>
+                            <h4>Ingrédients</h4>
+                            
+                            
+                       
+                          </article>`;
 }
 
-// Appel de la fonction card sur la première recette
-// card(recettes[0]);
-// Ajoutez ça dans une boucle
-for (let recette of recettes) {
-    console.log(recette);
-    card(recette);
+for (let recette of recettes){
+    console.log(recette.name);
 }
 
-
+section.innerHTML += "<p> Ma recette </p>"
