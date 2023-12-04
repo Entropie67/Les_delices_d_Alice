@@ -20,16 +20,22 @@ let section = document.querySelector("#recettes");
 le card de cette recette.
  */
 let createCard = (recette) => {
-    section.innerHTML += `<article class="card">
+    let chaine = `<article class="card">
                             <img src="images/${recette.image}"/>
                             <h3>${recette.name}</h3>
-                            <p>blabla</p>
+                            
                             <h4>RECETTE</h4>
+                            <p>${recette['description']}</p>
                             <h4>Ingrédients</h4>
-                            
-                            
-                       
-                          </article>`;
+                             <div class="ingredients">`;
+    for (let ingredient of recette.ingredients){
+        chaine += `<div class="ingredient">
+                        <h5>${ingredient.ingredient}</h5>
+                        <p>${ingredient.quantity}${ingredient.unit}</p>
+                   </div>`
+    }
+    chaine += `</div></article>`;
+    section.innerHTML += chaine;
 }
 
 // On appelle la fonction creatCard sur chaque recette
