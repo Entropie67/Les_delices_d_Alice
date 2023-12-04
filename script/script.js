@@ -31,15 +31,32 @@ let createCard = (recette) => {
     for (let ingredient of recette.ingredients){
         chaine += `<div class="ingredient">
                         <h5>${ingredient.ingredient}</h5>
-                        <p>${ingredient.quantity} ${ingredient.unit}</p>
-                   </div>`
+                        <p>${ingredient.quantity}`;
+        if (ingredient.unit){
+            chaine += `${ingredient.unit}`
+        }
+        chaine += `</p></div>`;
     }
     chaine += `</div></article>`;
     section.innerHTML += chaine;
 }
-
-// On appelle la fonction creatCard sur chaque recette
-for (let recette of recettes){
-    createCard(recette);
+/************************************************************/
+/* Fonction qui affiche les cartes d'une liste de recettes. */
+/************************************************************/
+let affichageRecettes = (liste) => {
+    for (let recette of liste){
+        createCard(recette);
+    }
 }
 
+affichageRecettes(recettes);
+
+/************************************************************/
+/*                          Filtres                          */
+/************************************************************/
+
+let filtreIngredient = (mot) => {
+    let liste;
+    console.log("Recherche sur le mot : ", mot);
+    return liste;
+}
