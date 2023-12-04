@@ -23,15 +23,16 @@ for (let i = 0; i < 5; i++ ){
     console.log(recettes[i].ingredients[0]);
 }
 
+/* A partir d'une recette affiche la carte associée */
 let card = (recette) => {
-    let truc= "";
-    // blabla
-    return truc;
+    let section = document.querySelector("#recettes");
+    section.innerHTML += `<article class="card"><img
+    class=""
+    src="images/${recette.image}"
+    alt="" />
+    <h3>${recette.name}</h3> </article>`;
 }
 
-let section = document.querySelector("#recettes");
-section.innerHTML = `<article class="card"><img
-  class=""
-  src="images/${recettes[0].image}"
-  alt="" />
- <h3>${recettes[0].name}</h3> </article>`;
+// Appel de la fonction card sur la première recette
+card(recettes[0]);
+
