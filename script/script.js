@@ -31,7 +31,7 @@ let createCard = (recette) => {
     for (let ingredient of recette.ingredients){
         chaine += `<div class="ingredient">
                         <h5>${ingredient.ingredient}</h5>
-                        <p>${ingredient.quantity}${ingredient.unit}</p>
+                        <p>${ingredient.quantity} ${ingredient.unit}</p>
                    </div>`
     }
     chaine += `</div></article>`;

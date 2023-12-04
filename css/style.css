@@ -2,6 +2,7 @@
 body {
     background-color: grey;
     max-width: 1024px;
+    margin: auto;
 }
 header {
     height: 200px;
@@ -39,7 +40,7 @@ section {
 .card {
     background-color: whitesmoke;
     width: 30%;
-    height: 200px;
+    height: 380px;
     border-radius: 10px;
     margin: 2px;
 }
@@ -59,11 +60,24 @@ section {
     font-size: 12px;
 }
 .card p {
-    font-size: 8px;
+    font-size: 35%;
 }
 .card h4 {
     font-family: anton;
     color: grey;
     font-size: 10px;
 }
-/**********************/
+h5 {
+    font-size: 30%;
+}
+
+.ingredient {
+    width: 50%;
+}
+.ingredients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*******
