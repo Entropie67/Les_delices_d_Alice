@@ -37,6 +37,11 @@ let card = (recette) => {
 }
 
 // Appel de la fonction card sur la première recette
+// card(recettes[0]);
 // Ajoutez ça dans une boucle
-card(recettes[0]);
+for (let recette of recettes) {
+    console.log(recette);
+    card(recette);
+}
+
 
