@@ -32,8 +32,11 @@ let card = (recette) => {
     src="images/${recette.image}"
     alt="" />
     <h3>${recette.name}</h3> 
+    <p> Bla bla bla </p>
     <h4>RECETTE</h4>
-    <h4>INGREDIENTS</h4></article>`;
+    <p> Bla bla bla </p>
+    <h4>INGREDIENTS</h4>
+    <p> Bla bla bla </p></article>`;
 }
 
 // Appel de la fonction card sur la première recette
