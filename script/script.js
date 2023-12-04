@@ -13,5 +13,27 @@ console.log("Premier ingrédient, de la première recette : ", recettes[0]["ingr
 console.log("*******************************************************************");
 // A vous de jouer !!
 /****************************************************************************************************/
+// On commence par réccupérer la section dans laquelle on va afficher les recettes.
+let section = document.querySelector("#recettes");
 
+/* Création d'une fonction qui prend en entrée une seule RECETTE et qui ajoute au HTML
+le card de cette recette.
+ */
+let createCard = (recette) => {
+    section.innerHTML += `<article class="card">
+                            <img src="images/${recette.image}"/>
+                            <h3>${recette.name}</h3>
+                            <p>blabla</p>
+                            <h4>RECETTE</h4>
+                            <h4>Ingrédients</h4>
+                            
+                            
+                       
+                          </article>`;
+}
+
+// On appelle la fonction creatCard sur chaque recette
+for (let recette of recettes){
+    createCard(recette);
+}
 
