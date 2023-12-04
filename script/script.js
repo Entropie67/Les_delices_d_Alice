@@ -14,11 +14,12 @@ console.log("*******************************************************************
 // A vous de jouer !!
 /****************************************************************************************************/
 /*
+// Exemple de boucle for of
 for (let recette of recettes) {
     console.log(recette);
 }
 */
-
+// Exemple de boucle for
 for (let i = 0; i < 5; i++ ){
     console.log(recettes[i].ingredients[0]);
 }
@@ -30,9 +31,12 @@ let card = (recette) => {
     class=""
     src="images/${recette.image}"
     alt="" />
-    <h3>${recette.name}</h3> </article>`;
+    <h3>${recette.name}</h3> 
+    <h4>RECETTE</h4>
+    <h4>INGREDIENTS</h4></article>`;
 }
 
 // Appel de la fonction card sur la première recette
+// Ajoutez ça dans une boucle
 card(recettes[0]);
 
